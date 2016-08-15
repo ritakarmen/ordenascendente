@@ -1,0 +1,100 @@
+/*dar estilo a la pagina para mejorar la presentacion*/
+*{
+    padding: 0;
+    margin: 0;
+}
+#principal{
+    padding: 50px 100px;
+    margin: 5% 5%;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background: #f3d6f0;
+}
+h2{
+    color: #3c3cd7;
+    text-align: center;
+    font-family: cursive;
+   /* word-wrap: break-word;
+     -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+     -ms-hyphens: auto;
+     -o-hyphens: auto;
+     hyphens: auto;*/
+}
+#indicacion{
+    background: #e599d9;
+    border-radius: 12px;
+    padding: 12px;
+    font-family: cursive;
+    color: #392493;
+}
+.bton{
+    background: #72bcf7;
+    border-radius: 12px;
+    padding: 5px;
+}
+.ordenAscendete{
+    padding: 5% 10%;
+    border-radius: 12px;
+    color: #452588;
+}
+/*se utiliza Angular js ng-animate 
+para dar movimiento al momento de ordenar los
+numeros*/
+.recuerda {background-color:#f52ed3;}
+
+.numero-move {
+    position: relative;
+    top: 26px;
+}
+
+.numero-move.numero-move-active {
+    transition: all 1.5s ease;
+    top: 0;
+}
+
+.numero-move + li {
+    
+    position: relative;
+    top: -26px;
+    color: blue;
+}
+
+.numero-move.numero-move-active + li {
+    transition: all 1.5s ease;
+    position: relative;
+    top: 0;
+}
+
+.numero-enter {
+    position: relative;
+    opacity: 0.0;
+    height: 0;
+    left: 100px;
+    transition: all 2.5s ease;
+    color: red;
+}
+
+.numero-enter.numero-enter-active {
+    transition: all 1.5s ease;
+    opacity: 1.0;
+    left: 0;
+    height: 26px;
+}
+
+
+.numero-leave.numero-leave-active {
+    transition: all 1.5s ease;
+    opacity: 0.0;
+    left: 100px;
+    height: 0;
+    top: -13px;
+}
+
+.numero.ng-enter-stagger {
+  -webkit-transition-delay:5s;
+  transition-delay:5s;
+  -webkit-transition-duration:1s;
+  transition-duration:1s;
+}

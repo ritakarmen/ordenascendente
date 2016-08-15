@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ordenando</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="whidth=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/orden.css">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div id="principal" ng-app="AppOrdenando" ng-controller="OrdenandoCtrl">
+
+          <h2>ORDENANDO NUMEROS DE FORMA ASCENDENTE</h2>
+
+          <div id="indicacion">
+            <h3>Indicación:</h3>
+            <p>Ingresa numeros en desorden, luego haz click en el boton ordenar y se ordenara de forma ascendente</p>
+            <p><span class="{{recuerda}}">Los números ingresados no deben repetirse.</span></p>
+          </div>
+
+          <div class="ordenAscendete" id="Ordenando de forma ascendente">
+            <h3>Ordenando de forma ascendente</h3>
+            <div class="numeros">Números a ordenar: {{numeros.length}}</div>
+            <ul>
+              <li ng-repeat="numero in numeros" ng-animate="'numero'">
+                {{numero}}
+              </li>
+            </ul>
+            <form ng-submit="agregarNumero()">
+              <input type="number" ng-model="ordenandoNumero" min=1 required>
+              <input class="btn btn-info" type="submit" value="agregarNumero">
+            </form>
+
+            <button class="bton" ng-click="reset()">Resetear</button>
+            <button class="bton" ng-click="ordenar()">Ordenar</button>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/orden.js"></script>
+</body>
+</html>
